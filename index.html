@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Water Sales Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 style="padding: 20px;">Water Sales Calculator</h1>
+
+  <div style="max-width: 500px; margin: 0 auto;">
+    <h2>Purified and O2 Water Sales</h2>
+    <label for="oxygenEndMeter">End Meter: </label><input id="oxygenEndMeter" type="number">
+    <label for="oxygenStartMeter">Start Meter: </label><input id="oxygenStartMeter" type="number">
+    <label for="purifiedWaterSale">Total Purified Water Sale: </label><input id="purifiedWaterSale" type="number">
+    <label for="o2WaterSale">Total O2 Water Sale: </label><input id="o2WaterSale" type="number">
+    <button onclick="calculateOxygen()">Calculate</button>
+    <button id="resetButton" onclick="resetFields()">Reset</button>
+    <p id="oxygenTotalPurifiedMeterReading"></p>
+    <p id="oxygenReportLoss" class="loss"></p>
+  </div>
+
+  <div style="max-width: 500px; margin: 0 auto;">
+    <h2>Alkaline Water Sales</h2>
+    <label for="alkalineEndMeter">End Meter: </label><input id="alkalineEndMeter" type="number">
+    <label for="alkalineStartMeter">Start Meter: </label><input id="alkalineStartMeter" type="number">
+    <label for="alkalineWaterSale">Total Alkaline Water Sale: </label><input id="alkalineWaterSale" type="number">
+    <button onclick="calculateAlkaline()">Calculate</button>
+    <button id="resetButton" onclick="resetFields()">Reset</button>
+    <p id="alkalineTotalMeterReading"></p>
+    <p id="alkalineReportLoss" class="loss"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
